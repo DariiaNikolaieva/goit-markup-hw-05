@@ -635,10 +635,6 @@ img {
   margin-right: 30px;
 }
 
-.activity-item:nth-child(3n) {
-  margin-right: 0;
-}
-
 .portfolio-item {
   margin-right: 30px;
   margin-bottom: 30px;
@@ -664,18 +660,43 @@ img {
     1px 4px 6px rgba(0, 0, 0, 0.16);
   outline: none;
 }
-
+.filter-image {
+  display: block;
+  position: relative;
+}
+.filter-image-overlay {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  opacity: 0;
+  transition-property: transform, opacity, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.fitler-image-summary {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--bgc-accent-text-color);
+  padding: 63px 24px;
+}
+.portfolio-link:hover .filter-image-overlay,
+.portfolio-link:focus .filter-image-overlay {
+  transform: translateY(0);
+  opacity: 1;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .card-content {
   padding: 20px 24px;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
 }
-
-.filter-image {
-  display: block;
-}
-
 .filter-name {
   font-size: 18px;
   line-height: 2;

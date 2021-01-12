@@ -134,7 +134,6 @@ img {
   border-radius: 2px;
   background-color: var(--button-bgc);
   margin-top: 28px;
-  bottom: -1px;
 }
 /* ДЛЯ АНИМАЦИИ ПОДЧЕРКИВАНИЯ ТЕКУЩЕЙ СТРАНИЦЫ
 .site-nav-link::after {

@@ -106,6 +106,7 @@ img {
 }
 
 .site-nav-link {
+  position: relative;
   color: var(--main-text-color);
   text-decoration: none;
   padding-bottom: 32px;
@@ -119,6 +120,26 @@ img {
 .site-nav-link:focus {
   color: var(--accent-text-color);
   outline: none;
+}
+.current {
+  color: var(--accent-text-color);
+}
+.site-nav-link::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--button-bgc);
+  transform: scaleX(0);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 28px;
+}
+.site-nav-link:hover::after {
+  transform: scaleX(1);
 }
 .contacts {
   font-weight: 500;
@@ -219,7 +240,6 @@ img {
   width: 1px;
   height: 1px;
   margin: -1px;
-  ...;
 }
 .benefits {
   padding-top: 94px;
@@ -382,7 +402,7 @@ img {
   border: none;
   border-radius: 50%;
   fill: #afb1b8;
-  transition-property: color background-color;
+  transition-property: color, background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -429,7 +449,7 @@ img {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   fill: #afb1b8;
-  transition-property: color border;
+  transition-property: color, border;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -477,10 +497,6 @@ img {
 .addressbox a {
   color: var(--footer-addressbox-text-color);
 }
-.site-nav .current {
-  color: var(--accent-text-color);
-}
-
 .footer-flex {
   display: flex;
   align-items: flex-start;
@@ -549,7 +565,7 @@ img {
   border-radius: 4px;
   padding: 6px 22px;
   cursor: pointer;
-  transition-property: color background-color box-shadow;
+  transition-property: color, background-color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }

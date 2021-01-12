@@ -60,13 +60,12 @@
                     <div class="hero-title-container">
                         <h1 class="hero-title">Эффективные решения для вашегобизнеса</h1>
                     </div>
-                    <button class="button" type="button">Заказать услугу</button>
+                    <button class="button" type="button" data-modal-open>Заказать услугу</button>
                 </div>
             </div>
         </section>>
-
+        
         <!--Преимущества-->
-
         <section class="benefits">
             <div class="container benefits-container">
                 <!--Заголовка "Преимущества" в макете нету-->
@@ -388,6 +387,17 @@
         </div> 
     </footer>
 
+<!--Модальное окно-->
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+        <button class="modal-close-button" data-modal-close>
+            <svg class="modal-close-icon" height="11" width="11">
+                <use href="./images/images-optimisized/svg/sprite.svg#icon-vector"></use>
+            </svg>
+        </button>
+    </div>
+</div>
+<script src="./js/modal.js"></script>
 </body>
 
 </html>
